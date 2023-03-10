@@ -13,7 +13,7 @@ public:
             mp[num]++;
         }
         
-        int len = mp.size();
+        int len = nums.size();
         vector<int> temp[len+1];
         for(auto m:mp)
         {
@@ -21,7 +21,7 @@ public:
         }
         int ans_len = 0;
 
-        for(int i=(len); i>0; i--)
+        for(int i=len; i>0; i--)
         {
             if(!temp[i].empty())
             {
@@ -35,6 +35,7 @@ public:
             
         }
 
+        //cout << "Return" << endl;
         return ans;
     }
 };
@@ -42,10 +43,10 @@ public:
 int main()
 {
     Solution sol;
-    vector<int> nums = {1, 1, 1, 2, 2, 3};
-    int k = 2;
+    vector<int> nums = {-1, -1};
+    int k = 1;
     vector<int> ans;
-    //cout << "Before answer";
+    cout << "Before answer" << endl;;
     ans = sol.topKFrequent(nums, k);
 
     cout << "Answer: ";
